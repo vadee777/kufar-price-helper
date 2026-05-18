@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Kufar Price Helper",
+  "description": "Adds approximate USD equivalents to BYN prices on Kufar and tracks selected listing prices over time.",
+  "version": "1.1.0",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://api.nbrb.by/*",
+    "https://*.kufar.by/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Price Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.kufar.by/*"
+      ],
+      "js": [
+        "src/content-shared.js",
+        "src/kufar.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

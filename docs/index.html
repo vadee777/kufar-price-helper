@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kufar Price Helper</title>
+    <meta name="description" content="Расширение для Chrome, Edge и других Chromium-браузеров: показывает примерную цену в USD рядом с ценами BYN на Kufar.">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #172033;
+        font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f7f9fc;
+      }
+
+      main {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        display: grid;
+        align-items: center;
+        min-height: 82vh;
+        padding: 56px 0 32px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(38px, 7vw, 72px);
+        line-height: 1.02;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 20px 0 0;
+        color: #405066;
+        font-size: 20px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border-radius: 6px;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        border: 1px solid #cbd5e1;
+        background: #fff;
+        color: #172033;
+      }
+
+      section {
+        padding: 34px 0;
+        border-top: 1px solid #dbe2ea;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 24px;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      code {
+        font: 0.95em ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+
+      .support {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      footer {
+        padding: 28px 0 42px;
+        color: #697586;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Kufar Price Helper</h1>
+          <p class="lead">Легкое Chromium-расширение, которое добавляет примерный USD-эквивалент к ценам BYN на Kufar и помогает отслеживать выбранные объявления.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/YOUR_GITHUB_USERNAME/edge-price-converter">GitHub</a>
+            <a class="button secondary" href="#install">Установка</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Что умеет</h2>
+        <ul>
+          <li>Конвертирует BYN в USD по официальному курсу НБРБ.</li>
+          <li>Кэширует курс на 6 часов.</li>
+          <li>Работает с динамически обновляемыми страницами Kufar.</li>
+          <li>Позволяет включать/выключать расширение из popup.</li>
+          <li>Хранит выбранные объявления и историю цен локально в браузере.</li>
+        </ul>
+      </section>
+
+      <section id="install">
+        <h2>Установка из исходников</h2>
+        <ol>
+          <li>Скачайте репозиторий или ZIP-архив релиза.</li>
+          <li>Откройте <code>chrome://extensions</code> или <code>edge://extensions</code>.</li>
+          <li>Включите Developer mode.</li>
+          <li>Нажмите Load unpacked и выберите папку расширения.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Поддержать проект</h2>
+        <p>Расширение остается бесплатным. Если оно экономит вам время, можно поддержать разработку:</p>
+        <p class="support">
+          <a class="button secondary" href="https://www.buymeacoffee.com/YOUR_USERNAME">Buy Me a Coffee</a>
+          <a class="button secondary" href="https://yoomoney.ru/to/YOUR_WALLET">ЮMoney</a>
+        </p>
+      </section>
+
+      <footer>
+        Version 1.1.0. Prices are approximate and intended for quick comparison only.
+      </footer>
+    </main>
+  </body>
+</html>

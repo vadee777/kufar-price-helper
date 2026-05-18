@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Price Helper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <h1>Price Helper</h1>
+        <p id="rate">Курс загружается...</p>
+      </header>
+
+      <label class="switch-row">
+        <span>Расширение</span>
+        <input id="enabled" type="checkbox">
+      </label>
+
+      <label class="switch-row">
+        <span>Kufar</span>
+        <input id="kufarEnabled" type="checkbox">
+      </label>
+
+      <label class="switch-row">
+        <span>Пометка *</span>
+        <input id="showAsterisk" type="checkbox">
+      </label>
+
+      <label class="switch-row">
+        <span>Округлять крупные цены</span>
+        <input id="useCompactRounding" type="checkbox">
+      </label>
+
+      <button id="refreshRate" type="button">Обновить курс</button>
+      <p class="note">Настройки применяются к открытым вкладкам автоматически.</p>
+
+      <footer class="support-links" aria-label="Поддержать проект">
+        <span>Поддержать:</span>
+        <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
+        <a href="https://yoomoney.ru/to/YOUR_WALLET" target="_blank" rel="noopener noreferrer">ЮMoney</a>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
