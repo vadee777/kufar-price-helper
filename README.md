@@ -23,19 +23,6 @@ Current version: `1.1.0`.
 3. Click **Load unpacked**.
 4. Select this folder: `edge-price-converter`.
 
-## Publish Package
-
-Create the package:
-
-```powershell
-New-Item -ItemType Directory -Force dist
-Compress-Archive -Path manifest.json,src,images -DestinationPath dist/kufar-price-helper-1.1.0.zip -Force
-```
-
-Upload `dist/kufar-price-helper-1.1.0.zip` to Chrome Web Store Developer Dashboard or Microsoft Partner Center.
-
-The extension is intended to be published as a free extension.
-
 ## GitHub Pages Landing
 
 The landing page lives in `docs/index.html`.
